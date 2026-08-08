@@ -50,7 +50,7 @@ class Bot(Client):
                 await asyncio.sleep(2)
                 await self.send_message(
                     chat_id=OWNER_ID,
-                    text=f"<b><blockquote>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ Bʏ @{self.username}</blockquote></b>",
+                    text=f"<b><blockquote>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ Bʏ @PyroSznpai</blockquote></b>",
                     parse_mode=ParseMode.HTML
                 )
             except Exception as e:
