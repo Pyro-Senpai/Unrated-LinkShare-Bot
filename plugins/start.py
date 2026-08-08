@@ -94,7 +94,7 @@ async def start_command(client: Client, message: Message):
                 start_param = message.command[1] if len(message.command) > 1 else ''
                 buttons.append([InlineKeyboardButton("🔄 Cʜᴇᴄᴋ Aɢᴀɪɴ", url=f"https://t.me/{me.username}?start={start_param}")])
                 return await message.reply_text(
-                    "<b>👋 Welcome!\n\nTo use this bot, you must join our channels first. Click the buttons below to join, then click 'Check Again'.</b>",
+                    "<b>💖 Welcome!\n\nTo use this bot, you must join our channels first. Click the buttons below to join, then click 'Check Again'.</b>",
                     reply_markup=InlineKeyboardMarkup(buttons)
                 )
 
