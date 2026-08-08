@@ -36,23 +36,19 @@ START_PIC = os.environ.get("START_PIC", "https://telegra.ph/file/aad055c98c566ad
 START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/aad055c98c566adfb7dcd-b42f72ff4d1de29e86.jpg")
 # Messages (Fixed extra blockquote tag here)
 START_MSG = os.environ.get("START_MSG", "<b><blockquote>● Wᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴀᴅᴠᴀɴᴄᴇᴅ ʟɪɴᴋs sʜᴀʀɪɴɢ ʙᴏᴛ!</blockquote></b>\n<b><blockquote expandable>● Tʜɪs ʙᴏᴛ ɪs an ᴇxᴄʟᴜsɪᴠᴇ gᴀᴛᴇᴡᴀʏ fᴏʀ oᴜʀ cᴏᴍᴍᴜɴɪᴛʏ tᴏ aᴄᴄᴇss cᴏɴᴛᴇɴᴛ sᴇᴄᴜʀᴇʟʏ. pʟᴇᴀsᴇ uꜱᴇ tʜᴇ lɪɴᴋs pʀᴏᴠɪᴅᴇᴅ iɴ tʜᴇ mᴀɪɴ cʜᴀɴɴᴇʟ tᴏ gᴇᴛ yᴏᴜʀ fɪʟᴇs.</blockquote></b>\n<b><blockquote>● Tʜɪs ɪs ᴀ pʀɪᴠᴀᴛᴇʟʏ mᴀɴᴀɢᴇᴅ sʏsᴛᴇᴍ tᴏ pʀᴏᴛᴇᴄᴛ oᴜʀ cᴏɴᴛᴇɴᴛ fʀᴏᴍ cᴏᴘʏʀɪɢʜᴛ iꜱsᴜᴇs.</blockquote></b>")
-HELP = os.environ.get("HELP_MESSAGE", "<b>›› ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟs:\n<blockquote>╭━━━━━━━━━━━━━━━━━━━━━\n├›› ᴜᴘᴅᴀᴛᴇs: @AnimeSenpaiWorld\n├›› sᴜᴘᴘᴏʀᴛ: @AnimeSenpaiWorld\n├›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @AnimeSenpaiWorld\n╰━━━━━━━━━━━━━━━━━━━━━</blockquote></b>")
-ABOUT = os.environ.get("ABOUT_MESSAGE", "<b>›› ᴄᴏᴍᴍᴜɴɪᴛʏ: @AnimeSenpaiWorld</b>\n<blockquote><b>╭━━━━━━━━━━━━━━━━━━━━━\n├›› ʟᴀɴɢᴜᴀɢᴇ: <a href='https://docs.python.org/3'>Pʏᴛʜᴏɴ 3.10</a>\n├›› ʟɪʙʀᴀʀʏ: <a href='https://www.mongodb.com/docs/'>Pʏʀᴏɢʀᴀᴍ ᴠ2</a>\n├›› ᴅᴀᴛᴀʙᴀsᴇ: <a href='https://www.mongodb.com/docs/'>Mᴏɴɢᴏ ᴅʙ</a>\n├›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @AnimeSenpaiWorld\n╰━━━━━━━━━━━━━━━━━━━━━</b></blockquote>")
+HELP = os.environ.get("HELP_MESSAGE", "<b>›› ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟs:\n<blockquote>◈ ᴜᴘᴅᴀᴛᴇs: <a href='https://t.me.AnimeSenpaiWorld'>ᴀɴɪᴍᴇ ᴡᴏʀʟᴅ sᴇɴᴘᴀɪ</a>\n◈ sᴜᴘᴘᴏʀᴛ: <a href='https://t.me.AnimeSenpaiWorld'>ᴀɴɪᴍᴇ ᴡᴏʀʟᴅ sᴇɴᴘᴀɪ</a>\n◈ ᴅᴇᴠᴇʟᴏᴘᴇʀ: <a href='https://t.me.AnimeSenpaiWorld'>ᴀɴɪᴍᴇ ᴡᴏʀʟᴅ sᴇɴᴘᴀɪ</a></blockquote></b>")
+ABOUT = os.environ.get("ABOUT_MESSAGE", "<b>›› ᴄᴏᴍᴍᴜɴɪᴛʏ: <a href='https://t.me.AnimeSenpaiWorld'>ᴀɴɪᴍᴇ ᴡᴏʀʟᴅ sᴇɴᴘᴀɪ</a></b>\n<blockquote><b>◈ ʟᴀɴɢᴜᴀɢᴇ: <a href='https://docs.python.org/3'>Pʏᴛʜᴏɴ 3.10</a>\n◈ ʟɪʙʀᴀʀʏ: <a href='https://www.mongodb.com/docs/'>Pʏʀᴏɢʀᴀᴍ ᴠ2</a>\n◈ ᴅᴀᴛᴀʙᴀsᴇ: <a href='https://www.mongodb.com/docs/'>Mᴏɴɢᴏ ᴅʙ</a>\n◈ ᴅᴇᴠᴇʟᴏᴘᴇʀ: <a href='https://t.me.AnimeSenpaiWorld'>ᴀɴɪᴍᴇ ᴡᴏʀʟᴅ sᴇɴᴘᴀɪ</a>\n╰━━━━━━━━━━━━━━━━━━━━━</b></blockquote>")
 
-ABOUT_TXT = """<b>›› ᴄᴏᴍᴍᴜɴɪᴛʏ: @AnimeSenpaiWorld</b>
-<blockquote><b>
-◈ ʟᴀɴɢᴜᴀɢᴇ: <a href='https://docs.python.org/3'>Pʏᴛʜᴏɴ 3.10</a>
+ABOUT_TXT = """<b>›› ᴄᴏᴍᴍᴜɴɪᴛʏ: <a href='https://t.me.AnimeSenpaiWorld'>ᴀɴɪᴍᴇ ᴡᴏʀʟᴅ sᴇɴᴘᴀɪ</a></b>
+<blockquote><b>◈ ʟᴀɴɢᴜᴀɢᴇ: <a href='https://docs.python.org/3'>Pʏᴛʜᴏɴ 3.10</a>
 ◈ ʟɪʙʀᴀʀʏ: <a href='https://www.mongodb.com/docs/'>Pʏʀᴏɢʀᴀᴍ ᴠ2</a>
 ◈ ᴅᴀᴛᴀʙᴀsᴇ: <a href='https://www.mongodb.com/docs/'>Mᴏɴɢᴏ ᴅʙ</a>
-◈ ᴅᴇᴠᴇʟᴏᴘᴇʀ: @AnimeSenpaiWorld
-</b></blockquote>""" 
+◈ ᴅᴇᴠᴇʟᴏᴘᴇʀ: <a href='https://t.me.AnimeSenpaiWorld'>ᴀɴɪᴍᴇ ᴡᴏʀʟᴅ sᴇɴᴘᴀɪ</a></b></blockquote>""" 
 
 CHANNELS_TXT = """<b>›› ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟs:
-<blockquote>
-◈ ᴜᴘᴅᴀᴛᴇs: @AnimeSenpaiWorld
-◈ sᴜᴘᴘᴏʀᴛ: @AnimeSenpaiWorld
-◈ ᴅᴇᴠᴇʟᴏᴘᴇʀ: @AnimeSenpaiWorld
-</blockquote></b>"""
+<blockquote>◈ ᴜᴘᴅᴀᴛᴇs: <a href='https://t.me.AnimeSenpaiWorld'>ᴀɴɪᴍᴇ ᴡᴏʀʟᴅ sᴇɴᴘᴀɪ</a>
+◈ sᴜᴘᴘᴏʀᴛ: <a href='https://t.me.AnimeSenpaiWorld'>ᴀɴɪᴍᴇ ᴡᴏʀʟᴅ sᴇɴᴘᴀɪ</a>
+◈ ᴅᴇᴠᴇʟᴏᴘᴇʀ: <a href='https://t.me.AnimeSenpaiWorld'>ᴀɴɪᴍᴇ ᴡᴏʀʟᴅ sᴇɴᴘᴀɪ</a></blockquote></b>"""
 
 #--- ---- ---- --- --- --- - -- -  - - - - - - - - - - - --  - -
 # Default
