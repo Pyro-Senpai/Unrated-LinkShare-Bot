@@ -32,8 +32,8 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "40"))
 #--- ---- ---- --- --- --- - -- -  - - - - - - - - - - - --  - -
 
 # Start pic
-START_PIC = os.environ.get("START_PIC", "https://graph.org/file/7228e9fe7ebf6145cca11-38b598b785ee91950b.jpg")
-START_IMG = os.environ.get("START_IMG", "https://graph.org/file/7228e9fe7ebf6145cca11-38b598b785ee91950b.jpg")
+START_PIC = os.environ.get("START_PIC", "https://telegra.ph/file/aad055c98c566adfb7dcd-b42f72ff4d1de29e86.jpg")
+START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/aad055c98c566adfb7dcd-b42f72ff4d1de29e86.jpg")
 # Messages
 START_MSG = os.environ.get("START_MSG", "<b>👋 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴀᴅᴠᴀɴᴄᴇᴅ ʟɪɴᴋs sʜᴀʀɪɴɢ ʙᴏᴛ!</b>\n\n<blockquote><b>ᴛʜɪs ʙᴏᴛ ɪs ᴀɴ ᴇxᴄʟᴜsɪᴠᴇ ɢᴀᴛᴇᴡᴀʏ ғᴏʀ ᴏᴜʀ ᴄᴏᴍᴍᴜɴɪᴛʏ ᴛᴏ ᴀᴄᴄᴇss ᴄᴏɴᴛᴇɴᴛ sᴇᴄᴜʀᴇʟʏ. ᴘʟᴇᴀsᴇ ᴜsᴇ ᴛʜᴇ ʟɪɴᴋs ᴘʀᴏᴠɪᴅᴇᴅ ɪɴ ᴛʜᴇ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ғɪʟᴇs.</b></blockquote>\n\n<b>• 💠 ᴛʜɪs ɪs ᴀ ᴘʀɪᴠᴀᴛᴇʟʏ ᴍᴀɴᴀɢᴇᴅ sʏsᴛᴇᴍ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ᴏᴜʀ ᴄᴏɴᴛᴇɴᴛ ғʀᴏᴍ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs.</b>")
 HELP = os.environ.get("HELP_MESSAGE", "<b>›› ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟs:\n<blockquote>╭━━━━━━━━━━━━━━━━━━━━━\n├›› ᴜᴘᴅᴀᴛᴇs: @AnimeSenpaiWorld\n├›› sᴜᴘᴘᴏʀᴛ: @AnimeSenpaiWorld\n├›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @AnimeSenpaiWorld\n╰━━━━━━━━━━━━━━━━━━━━━</blockquote></b>")
