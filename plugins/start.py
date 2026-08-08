@@ -172,7 +172,7 @@ async def start_command(client: Client, message: Message):
                     is_request_link = is_request
                     await save_invite_link(channel_id, invite_link, is_request_link)
 
-            button_text = "• ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ •" if is_request_link else "🛎 Jᴏɪɴ Cʜᴀɴɴᴇʟ"
+            button_text = "🛎 Rᴇǫᴜᴇsᴛ Tᴏ Jᴏɪɴ" if is_request_link else "🛎 Jᴏɪɴ Cʜᴀɴɴᴇʟ"
             button = InlineKeyboardMarkup([[InlineKeyboardButton(button_text, url=invite_link)]])
 
             await message.reply_text(
@@ -257,7 +257,7 @@ async def check_subscription_status(client: Client, user_id: int, fsub_channels:
         except Exception as e:
             print(f"FSub Button Error: {e}")
             
-    buttons.append([InlineKeyboardButton("🔄 Check Again", callback_data="check_sub")])
+    buttons.append([InlineKeyboardButton("🔄 Cʜᴇᴄᴋ Aɢᴀɪɴ", callback_data="check_sub")])
     
     markup = InlineKeyboardMarkup(buttons)
     message_text = "<b>👋 Welcome!\n\nTo use this bot, you must join our channels first. Click the buttons below to join, then click 'Check Again'.</b>"
