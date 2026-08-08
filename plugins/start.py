@@ -16,7 +16,6 @@ import asyncio
 from asyncio import sleep
 from asyncio import Lock
 import random 
-from script import script
 
 from datetime import datetime, timedelta
 from config import *
