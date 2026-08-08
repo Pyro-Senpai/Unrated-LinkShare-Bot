@@ -16,6 +16,7 @@ import asyncio
 from asyncio import sleep
 from asyncio import Lock
 import random 
+from script import script
 
 from datetime import datetime, timedelta
 from config import *
@@ -205,8 +206,11 @@ async def start_command(client: Client, message: Message):
                 [InlineKeyboardButton("• Jᴏɪɴ ᴜᴘᴅᴀᴛᴇs •", url="https://t.me/AnimeSenpaiWorld")]
             ]
         )
-        caption = client.messages.get('START', 'Welcome, {mention}').format(
-            mention=message.from_user.mention
+        caption = script.START_MSG.format(
+            first=message.from_user.first_name,
+            mention=message.from_user.mention,
+        )
+
         ) 
             
         try:
