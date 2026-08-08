@@ -198,15 +198,14 @@ async def start_command(client: Client, message: Message):
             )
             print(f"Decoding error: {e}")
     else:
-        user = message.from_user
-        inline_buttons = InlineKeyboardMarkup(
+        inline_buttons = InlineKeyboardMarkup
+        caption = TEXT.format(mention=user.mention)(
             [
                 [InlineKeyboardButton("• ᴀʙᴏᴜᴛ", callback_data="about"),
                  InlineKeyboardButton("ᴄʜᴀɴɴᴇʟs •", callback_data="channels")],
                 [InlineKeyboardButton("• Jᴏɪɴ ᴜᴘᴅᴀᴛᴇs •", url="https://t.me/AnimeSenpaiWorld")]
             ]
         )
-        caption = TEXT.format(mention=user.mention)
             
         try:
             await message.reply_photo(
