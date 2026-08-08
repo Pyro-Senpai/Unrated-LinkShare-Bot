@@ -262,7 +262,7 @@ async def check_subscription_status(client: Client, user_id: int, fsub_channels:
     buttons.append([InlineKeyboardButton("🔄 Cʜᴇᴄᴋ Aɢᴀɪɴ", callback_data="check_sub")])
     
     markup = InlineKeyboardMarkup(buttons)
-    message_text = "<b>👋 Welcome!\n\nTo use this bot, you must join our channels first. Click the buttons below to join, then click 'Check Again'.</b>"
+    message_text = "<b>💖 Welcome!\n\nTo use this bot, you must join our channels first. Click the buttons below to join, then click 'Check Again'.</b>"
     return False, message_text, markup
 
 
@@ -534,7 +534,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         try:
             await query.edit_message_media(
                 InputMediaPhoto(
-                    "https://graph.org/file/7228e9fe7ebf6145cca11-38b598b785ee91950b.jpg",
+                    "https://telegra.ph/file/aad055c98c566adfb7dcd-b42f72ff4d1de29e86.jpg",
                     ABOUT_TXT
                 ),
                 reply_markup=InlineKeyboardMarkup([
@@ -547,7 +547,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif data == "channels":
         try:
             await query.edit_message_media(
-                InputMediaPhoto("https://graph.org/file/7228e9fe7ebf6145cca11-38b598b785ee91950b.jpg", 
+                InputMediaPhoto("https://telegra.ph/file/aad055c98c566adfb7dcd-b42f72ff4d1de29e86.jpg", 
                                 CHANNELS_TXT
                 ),
                 reply_markup=InlineKeyboardMarkup([
