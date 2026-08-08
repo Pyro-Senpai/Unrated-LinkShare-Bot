@@ -36,7 +36,6 @@ is_canceled = False
 @Client.on_message(filters.command('start') & filters.private)
 async def start_command(client: Client, message: Message):
     user_id = message.from_user.id
-    user = message.from_user
 
     if user_id in user_banned_until:
         if datetime.now() < user_banned_until[user_id]:
@@ -199,6 +198,7 @@ async def start_command(client: Client, message: Message):
             )
             print(f"Decoding error: {e}")
     else:
+        user = message.from_user
         inline_buttons = InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton("• ᴀʙᴏᴜᴛ", callback_data="about"),
@@ -206,19 +206,19 @@ async def start_command(client: Client, message: Message):
                 [InlineKeyboardButton("• Jᴏɪɴ ᴜᴘᴅᴀᴛᴇs •", url="https://t.me/AnimeSenpaiWorld")]
             ]
         )
-        caption = TEXT.format(mention=user.mention, chat_link="", title="")
+        caption = TEXT.format(mention=user.mention)
             
         try:
             await message.reply_photo(
                 photo=START_PIC,
-                caption=caption,
+                caption=START_MSG,
                 reply_markup=inline_buttons,
                 parse_mode=ParseMode.HTML
             )
         except Exception as e:
             print(f"Error sending start picture: {e}")
             await message.reply_text(
-                caption,
+                START_MSG,
                 reply_markup=inline_buttons,
                 parse_mode=ParseMode.HTML
             )
@@ -262,7 +262,7 @@ async def check_subscription_status(client: Client, user_id: int, fsub_channels:
     buttons.append([InlineKeyboardButton("🔄 Cʜᴇᴄᴋ Aɢᴀɪɴ", callback_data="check_sub")])
     
     markup = InlineKeyboardMarkup(buttons)
-    message_text = "<b>💖 Welcome!\n\nTo use this bot, you must join our channels first. Click the buttons below to join, then click 'Check Again'.</b>"
+    message_text = "<b>👋 Welcome!\n\nTo use this bot, you must join our channels first. Click the buttons below to join, then click 'Check Again'.</b>"
     return False, message_text, markup
 
 
@@ -476,11 +476,47 @@ async def auto_delete(sent_msg, duration):
 #----------------------------------
 
 user_message_count = {}
+# user_banned_until = {} # Already defined above
 
 MAX_MESSAGES = 3
 TIME_WINDOW = timedelta(seconds=10)
 BAN_DURATION = timedelta(hours=1)
 
+"""
+
+@Client.on_message(filters.private)
+async def monitor_messages(client: Client, message: Message):
+    user_id = message.from_user.id
+    now = datetime.now()
+
+    if message.text and message.text.startswith("/"):
+        return
+
+    if user_id in ADMINS:
+        return 
+
+    if user_id in user_banned_until and now < user_banned_until[user_id]:
+        await message.reply_text(
+            "<b><blockquote expandable>You are temporarily banned from using commands due to spamming. Try again later.</b>",
+            parse_mode=ParseMode.HTML
+        )
+        return
+
+    if user_id not in user_message_count:
+        user_message_count[user_id] = []
+
+    user_message_count[user_id].append(now)
+    user_message_count[user_id] = [time for time in user_message_count[user_id] if now - time <= TIME_WINDOW]
+
+    if len(user_message_count[user_id]) > MAX_MESSAGES:
+        user_banned_until[user_id] = now + BAN_DURATION
+        await message.reply_text(
+            "<b><blockquote expandable>You are temporarily banned from using commands due to spamming. Try again later.</b>",
+            parse_mode=ParseMode.HTML
+        )
+        return
+
+"""
 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
@@ -498,7 +534,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         try:
             await query.edit_message_media(
                 InputMediaPhoto(
-                    "https://telegra.ph/file/aad055c98c566adfb7dcd-b42f72ff4d1de29e86.jpg",
+                    "https://graph.org/file/7228e9fe7ebf6145cca11-38b598b785ee91950b.jpg",
                     ABOUT_TXT
                 ),
                 reply_markup=InlineKeyboardMarkup([
@@ -511,7 +547,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif data == "channels":
         try:
             await query.edit_message_media(
-                InputMediaPhoto("https://telegra.ph/file/aad055c98c566adfb7dcd-b42f72ff4d1de29e86.jpg", 
+                InputMediaPhoto("https://graph.org/file/7228e9fe7ebf6145cca11-38b598b785ee91950b.jpg", 
                                 CHANNELS_TXT
                 ),
                 reply_markup=InlineKeyboardMarkup([
