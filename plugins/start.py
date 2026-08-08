@@ -206,7 +206,7 @@ async def start_command(client: Client, message: Message):
                 [InlineKeyboardButton("• Jᴏɪɴ ᴜᴘᴅᴀᴛᴇs •", url="https://t.me/AnimeSenpaiWorld")]
             ]
         )
-        caption = TEXT.format(mention=user.mention, chat_link="")
+        caption = TEXT.format(mention=user.mention, chat_link="", title="")
             
         try:
             await message.reply_photo(
