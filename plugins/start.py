@@ -205,13 +205,6 @@ async def start_command(client: Client, message: Message):
                 [InlineKeyboardButton("• Jᴏɪɴ ᴜᴘᴅᴀᴛᴇs •", url="https://t.me/AnimeSenpaiWorld")]
             ]
         )
-        
-        caption = START_MSG
-        if "{first}" in caption: caption = caption.replace("{first}", message.from_user.first_name or "")
-        if "{last}" in caption: caption = caption.replace("{last}", message.from_user.last_name or "")
-        if "{username}" in caption: caption = caption.replace("{username}", "" if not message.from_user.username else '@' + message.from_user.username)
-        if "{mention}" in caption: caption = caption.replace("{mention}", message.from_user.mention or "")
-        if "{id}" in caption: caption = caption.replace("{id}", str(message.from_user.id))
             
         try:
             await message.reply_photo(
