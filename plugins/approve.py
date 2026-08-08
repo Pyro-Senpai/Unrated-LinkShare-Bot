@@ -67,7 +67,7 @@ async def autoapprove(client, message: ChatJoinRequest):
                 [InlineKeyboardButton('• ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs •', url='https://t.me/AnimeSenpaiWorld')]
             ]
             markup = InlineKeyboardMarkup(buttons)
-            caption = TEXT.format(mention=user.mention, title=chat.title,chat_link=invite_link)
+            caption = TEXT.format(mention=user.mention, title=chat.title, chat_link=invite_link)
 
             await client.send_photo(
                 chat_id=user.id,
