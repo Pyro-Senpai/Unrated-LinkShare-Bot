@@ -92,7 +92,7 @@ async def start_command(client: Client, message: Message):
             if buttons:
                 me = client.me or (await client.get_me())
                 start_param = message.command[1] if len(message.command) > 1 else ''
-                buttons.append([InlineKeyboardButton("🔄 Check Again", url=f"https://t.me/{me.username}?start={start_param}")])
+                buttons.append([InlineKeyboardButton("🔄 Cʜᴇᴄᴋ Aɢᴀɪɴ", url=f"https://t.me/{me.username}?start={start_param}")])
                 return await message.reply_text(
                     "<b>👋 Welcome!\n\nTo use this bot, you must join our channels first. Click the buttons below to join, then click 'Check Again'.</b>",
                     reply_markup=InlineKeyboardMarkup(buttons)
@@ -172,7 +172,7 @@ async def start_command(client: Client, message: Message):
                     is_request_link = is_request
                     await save_invite_link(channel_id, invite_link, is_request_link)
 
-            button_text = "• ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ •" if is_request_link else "• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •"
+            button_text = "• ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ •" if is_request_link else "🛎 Jᴏɪɴ Cʜᴀɴɴᴇʟ"
             button = InlineKeyboardMarkup([[InlineKeyboardButton(button_text, url=invite_link)]])
 
             await message.reply_text(
@@ -202,7 +202,7 @@ async def start_command(client: Client, message: Message):
             [
                 [InlineKeyboardButton("• ᴀʙᴏᴜᴛ", callback_data="about"),
                  InlineKeyboardButton("ᴄʜᴀɴɴᴇʟs •", callback_data="channels")],
-                [InlineKeyboardButton("• Jᴏɪɴ ᴜᴘᴅᴀᴛᴇs •", url="https://t.me/Unrated_Coder")]
+                [InlineKeyboardButton("• Jᴏɪɴ ᴜᴘᴅᴀᴛᴇs •", url="https://t.me/AnimeSenpaiWorld")]
             ]
         )
         
@@ -560,7 +560,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             [
                 [InlineKeyboardButton("• ᴀʙᴏᴜᴛ", callback_data="about"),
                  InlineKeyboardButton("ᴄʜᴀɴɴᴇʟs •", callback_data="channels")],
-                [InlineKeyboardButton("• Jᴏɪɴ ᴜᴘᴅᴀᴛᴇs •", url="https://t.me/Unrated_Coder")]
+                [InlineKeyboardButton("• Jᴏɪɴ ᴜᴘᴅᴀᴛᴇs •", url="https://t.me/AnimeSenpaiWorld")]
             ]
         )
         try:
