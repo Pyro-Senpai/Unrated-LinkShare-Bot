@@ -36,6 +36,7 @@ is_canceled = False
 @Client.on_message(filters.command('start') & filters.private)
 async def start_command(client: Client, message: Message):
     user_id = message.from_user.id
+    user = message.from_user
 
     if user_id in user_banned_until:
         if datetime.now() < user_banned_until[user_id]:
@@ -210,14 +211,14 @@ async def start_command(client: Client, message: Message):
         try:
             await message.reply_photo(
                 photo=START_PIC,
-                caption=START_MSG,
+                caption=caption,
                 reply_markup=inline_buttons,
                 parse_mode=ParseMode.HTML
             )
         except Exception as e:
             print(f"Error sending start picture: {e}")
             await message.reply_text(
-                START_MSG,
+                caption,
                 reply_markup=inline_buttons,
                 parse_mode=ParseMode.HTML
             )
