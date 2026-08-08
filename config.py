@@ -24,7 +24,7 @@ DB_NAME = os.environ.get("DB_NAME", "Unrated-LinkShare-Bot")
 #Auto approve 
 id_pattern = re.compile(r'^.\d+$')
 CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '').replace(',', ' ').split()] # dont change anything
-TEXT = environ.get("APPROVED_WELCOME_TEXT", "<b>💖 ʜᴇʏ {mention}! 🥀,\nʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ <a href='{chat_link}'>{title}</a> ɪs ᴀᴘᴘʀᴏᴠᴇᴅ.\n‣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @AnimeSenpaiWorld</b>")
+TEXT = environ.get("APPROVED_WELCOME_TEXT", "<b>💖 ʜᴇʏ {mention}! 🥀,\n<blockquote>ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ <a href='{chat_link}'>{title}</a> ɪs ᴀᴘᴘʀᴏᴠᴇᴅ.</blockquote>\n<blockquote>‣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @AnimeSenpaiWorld</blockquote></b>")
 APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 
 # Default
