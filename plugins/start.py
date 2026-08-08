@@ -198,8 +198,7 @@ async def start_command(client: Client, message: Message):
             )
             print(f"Decoding error: {e}")
     else:
-        inline_buttons = InlineKeyboardMarkup
-        caption = TEXT.format(mention=user.mention)(
+        inline_buttons = InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton("• ᴀʙᴏᴜᴛ", callback_data="about"),
                  InlineKeyboardButton("ᴄʜᴀɴɴᴇʟs •", callback_data="channels")],
