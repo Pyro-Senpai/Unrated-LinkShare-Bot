@@ -498,7 +498,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         try:
             await query.edit_message_media(
                 InputMediaPhoto(
-                    "https://graph.org/file/7228e9fe7ebf6145cca11-38b598b785ee91950b.jpg",
+                    "https://telegra.ph/file/aad055c98c566adfb7dcd-b42f72ff4d1de29e86.jpg",
                     ABOUT_TXT
                 ),
                 reply_markup=InlineKeyboardMarkup([
@@ -511,7 +511,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif data == "channels":
         try:
             await query.edit_message_media(
-                InputMediaPhoto("https://graph.org/file/7228e9fe7ebf6145cca11-38b598b785ee91950b.jpg", 
+                InputMediaPhoto("https://telegra.ph/file/aad055c98c566adfb7dcd-b42f72ff4d1de29e86.jpg", 
                                 CHANNELS_TXT
                 ),
                 reply_markup=InlineKeyboardMarkup([
